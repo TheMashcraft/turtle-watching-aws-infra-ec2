@@ -23,3 +23,8 @@ output "private_key_pem" {
   value       = tls_private_key.ssh_key.private_key_pem
   sensitive   = true
 }
+
+output "private_key_secret_arn" {
+  description = "The ARN of the Secrets Manager secret storing the private key"
+  value       = aws_secretsmanager_secret.ssh_key_secret.arn
+}
