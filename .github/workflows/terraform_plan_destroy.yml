@@ -1,9 +1,9 @@
-name: Terraform Apply
+name: Terraform Destroy
 
 on:
   push:
     branches:
-      - main
+      - plan/destroy
 
 jobs:
   terraform:
@@ -35,8 +35,5 @@ jobs:
     - name: Terraform Validate
       run: terraform validate
 
-    - name: Terraform Plan
-      run: terraform plan
-
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+    - name: Terraform Plan Destroy
+      run: terraform plan -destroy
