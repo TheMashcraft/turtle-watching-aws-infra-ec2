@@ -1,8 +1,3 @@
-variable "key_name" {
-  description = "Name of the SSH key pair"
-  type        = string
-}
-
 variable "vpc_cidr" {
   description = "CIDR block for the VPC"
   type        = string
