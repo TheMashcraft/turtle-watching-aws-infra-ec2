@@ -17,5 +17,5 @@ resource "aws_instance" "flask_app" {
 
 resource "aws_eip" "flask_eip" {
   instance = aws_instance.flask_app.id
-  vpc      = true
+  domain   = "vpc"
 }
