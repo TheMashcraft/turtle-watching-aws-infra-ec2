@@ -30,9 +30,7 @@ jobs:
         aws-region: us-west-2
 
     - name: Terraform Init
-      run: terraform init -backend-config="password=$TF_HTTP_PASSWORD"
-      env:
-        TF_HTTP_PASSWORD: ${{ secrets.TOKEN }}
+      run: terraform init
 
     - name: Terraform Validate
       run: terraform validate
