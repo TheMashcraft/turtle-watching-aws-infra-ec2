@@ -1,10 +1,9 @@
 terraform {
-  backend "http" {
-    address        = "https://api.tfstate.dev/github/v1"
-    lock_address   = "https://api.tfstate.dev/github/v1/lock"
-    unlock_address = "https://api.tfstate.dev/github/v1/lock"
-    lock_method    = "PUT"
-    unlock_method  = "DELETE"
-    username       = "TheRealMashcraft/turtle-watching-aws-infra-ec2"
+  backend "s3" {
+    bucket         = "tf-backend-turtle"
+    key            = "ec2/terraform.tfstate"
+    region         = "us-west-2"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
   }
 }
