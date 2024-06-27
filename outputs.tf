@@ -19,6 +19,7 @@ output "subnet_id" {
 }
 
 output "private_key_pem" {
-  value     = tls_private_key.ssh_key.private_key_pem
-  sensitive = true
+  description = "The private key of the SSH key pair"
+  value       = tls_private_key.ssh_key.private_key_pem
+  sensitive   = true
 }
