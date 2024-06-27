@@ -12,7 +12,7 @@ resource "aws_instance" "flask_app" {
     Name = "flask_app"
   }
 
-  security_groups = [aws_security_group.flask_sg.name]
+  vpc_security_group_ids = [aws_security_group.flask_sg.id]
 }
 
 resource "aws_eip" "flask_eip" {
