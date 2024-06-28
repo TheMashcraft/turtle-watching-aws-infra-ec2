@@ -1,6 +1,10 @@
 #!/bin/bash
-yum update -y
-yum install -y python3 git
+sudo yum update -y
+sudo yum install -y python3 git
+
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+
 pip3 install flask
 
 # Clone the Flask app from your repository
