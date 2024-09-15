@@ -5,6 +5,7 @@ on:
     branches-ignore:
       - main
       - destroy
+      - plan/destroy
 
 jobs:
   deploy:
