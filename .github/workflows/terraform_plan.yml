@@ -15,3 +15,6 @@ jobs:
       aws_iam_role: 'arn:aws:iam::747693303791:role/GithubActionsRole'  # AWS IAM role to assume
       aws_region: 'us-west-2'               # AWS region for deployment
       plan_file: 'terraform.tfplan'         # Path to save the Terraform plan file
+    permissions:
+      id-token: write
+      contents: read
