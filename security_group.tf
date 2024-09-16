@@ -7,7 +7,7 @@ resource "aws_security_group" "flask_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["76.17.49.249/32"]
+    cidr_blocks = ["38.81.80.37/32"]
   }
 
   ingress {
