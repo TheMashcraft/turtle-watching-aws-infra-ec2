@@ -9,7 +9,7 @@ resource "aws_key_pair" "generated_key" {
 }
 
 resource "aws_secretsmanager_secret" "ssh_key_secret" {
-  name = "terraform-ec2-ssh-key"
+  name = "terraform-ec2-ssh-key-matt"
 }
 
 resource "aws_secretsmanager_secret_version" "ssh_key_secret_version" {
